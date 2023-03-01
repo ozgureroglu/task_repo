@@ -101,7 +101,6 @@ export const deletePostHandler = async (
   next: NextFunction
 ) => {
   try {
-    console.log(req);
     const post = await deletePost(     
       req.body.postId
     );

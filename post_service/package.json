@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {
+  "scripts": {  
+    "build": "tsc -p .",
     "start": "ts-node-dev --respawn --transpile-only src/app.ts"
   },
   "dependencies": {

@@ -1,9 +1,12 @@
 import mongoose from 'mongoose';
 import config from 'config';
 
-const dbUrl = `mongodb://${config.get('dbName')}:${config.get(
+console.log(config.get('dbUsername'))
+
+
+const dbUrl = `mongodb://${config.get('dbUsername')}:${config.get(
   'dbPass'
-)}@localhost:6000/jodel_post_service?authSource=admin`;
+)}@${config.get('dbServer')}:${config.get('dbPort')}/${config.get('dbName')}?authSource=admin`;
 
 const connectDB = async () => {
   try {
