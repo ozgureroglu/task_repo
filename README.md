@@ -1,6 +1,9 @@
 # jodel Task
 
-This repository contains the code for;
+This repository contains the code and documentation for;
+
+1. Link to [orchestration diagram](https://drive.google.com/file/d/1EGbxlLv4MdI3h7GhkWxVpDKraHO8J1W7/view?usp=sharing) in Draw.io with explanations on the diagram: 
+
 1. Post service, which was developed as a REST app to mimic the service that was mentioned in the task. That simply includes REST services to create, delete, list messages.
     * A github actions based pipeline has been added to demonstrate the dockerization of the service. 
 
@@ -8,7 +11,8 @@ This repository contains the code for;
 
 3. K8S manifests to deploy App, MongoDB Cluster and Redis Cluster
 
-4. 
+4. Documentation to explain a zero-downtime migration between environments.
+
 
 
 ## Local Development
