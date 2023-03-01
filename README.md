@@ -1,7 +1,8 @@
 # jodel Task
 
 This repository contains the code for;
-1. Post service, which was developed as a REST app to mimic the service that os re to provide sample REST interface to demon
+1. Post service, which was developed as a REST app to mimic the service that was mentioned in the task. That simply includes REST services to create, delete, list messages.
+    * A github actions based pipeline has been added to demonstrate the dockerization of the service. 
 
 2. Terraform code to create an EKS cluster on AWS
 

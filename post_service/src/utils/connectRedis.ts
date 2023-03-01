@@ -1,6 +1,7 @@
 import { createClient } from 'redis';
+import config from 'config';
 
-const redisUrl = `redis://localhost:6379`;
+const redisUrl = `redis://${config.get('redisServer')}:${config.get('redisPort')}`;
 const redisClient = createClient({
   url: redisUrl,
 });

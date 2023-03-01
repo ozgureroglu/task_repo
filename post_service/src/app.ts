@@ -1,10 +1,19 @@
 const path = require('path');
 import * as dotenv from 'dotenv'
+
 console.log(path.resolve(__dirname, '..',`${process.env.NODE_ENV}.env`))
 dotenv.config({
   path: path.resolve(__dirname, '..',`${process.env.NODE_ENV}.env`)
 });
-// require('dotenv').config()
+
+
+import express, { NextFunction, Request, Response } from 'express';
+import morgan from 'morgan';
+import config from 'config';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import connectDB from './utils/connectDB';
+import postRouter from './routes/post.route';
 
 console.log("***************passed")
 console.log(process.env)
@@ -17,16 +26,6 @@ console.log(process.env.MONGODB_DATABASE_NAME)
 console.log(process.env.REDIS_SERVER)
 console.log(process.env.REDIS_PORT)
 
-import express, { NextFunction, Request, Response } from 'express';
-import morgan from 'morgan';
-import config from 'config';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
-import connectDB from './utils/connectDB';
-import postRouter from './routes/post.route';
-
-
-
 // console.log(`${config.get('dbUsername')}`)
 console.log('\n'+`${config.get('dbServer')}`)
 console.log(`${config.get('dbPort')}`)
@@ -35,6 +34,9 @@ console.log(`${config.get('dbPass')}`)
 console.log(`${config.get('dbName')}`)
 console.log(`${config.get('redisServer')}`)
 console.log(`${config.get('redisPort')}`)
+
+
+// Create the applicatio
 const app = express();
 
 // Middleware
