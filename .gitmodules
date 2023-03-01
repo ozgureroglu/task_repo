@@ -1,0 +1,9 @@
+[submodule "jodel_eks_terraform"]
+	path = jodel_eks_terraform
+	url = https://github.com/ozgureroglu/jodel_eks_terraform.git
+[submodule "jodel_k8s_manifests"]
+	path = jodel_k8s_manifests
+	url = https://github.com/ozgureroglu/jodel_k8s_manifests.git
+[submodule "jodel_post_service"]
+	path = jodel_post_service
+	url = https://github.com/ozgureroglu/jodel_post_service.git
